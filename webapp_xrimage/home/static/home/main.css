@@ -1,0 +1,236 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: montserrat;
+}
+
+img.logo{
+  padding: 0px 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: transparent;
+  justify-content:space-between;
+  position:fixed;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 0.5s ease 0s;
+}
+
+/* Solid class attached on scroll past first section */
+.navbar.solid {
+  background-color: #000066;
+  transition: background-color 0.5s ease 0s;
+  box-shadow: 0 0 10px grey;
+}
+
+.navbar ul{
+  float:right;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+.navbar ul li{
+
+  display:inline-block;
+  line-height: 80px;
+  margin: 5px 5px;
+}
+
+.navbar ul li a{
+  color:rgb(2, 10, 51);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px ;
+  padding: 7px 13px;
+  border-radius: 5px;   
+}
+
+.navbar ul li a.btnLog{
+  font-size: 17px ;
+  border: 2px solid rgb(100, 254, 189);
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #fbfbff;
+}
+.navbar ul li a.btnReg{
+  font-size: 17px ;
+  border: 2px solid rgb(100, 254, 189);
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: #0a0091;
+}
+
+a.active, a:hover{
+
+  background:rgb(100, 254, 189);
+  transition: .5s;
+
+}
+
+.navbar-dark .navbar-toggler-icon {
+  border-radius: 5px;
+  border: 2px solid rgb(100, 254, 189);
+  border-color: lightgreen;
+  color: aliceblue;
+}
+
+@media (max-width: 767px) {
+
+  .navbar {
+    position:absolute;
+    height: 80px;
+    margin-top: -15px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    z-index: 100;
+    transition: background-color 0.5s ease 0s;
+  }
+  img.logo{
+    padding: 0px 0px;
+    margin-top: 2px;
+    margin-left: -5px;
+  }
+
+  .navbar ul{
+
+    float:left;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  
+  .navbar ul li{
+  
+    display:inline-block;
+    line-height: 10px;
+    margin: 5px 5px;
+  } 
+  .navbar ul li a{
+    color:rgb(2, 10, 51);
+    font-size: 17px ;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+  .navbar ul li a.btnLog{
+    font-size: 17px ;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border:none;
+    background-color: transparent;
+  }
+  .navbar ul li a.btnReg{
+    font-size: 17px ;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color:rgb(2, 10, 51);
+    border:none;
+    background-color: transparent;
+  }
+  .navbar ul li a.btnLog:hover{
+    background:rgb(100, 254, 189);
+    transition: .5s;
+  }
+  .navbar ul li a.btnReg:hover{
+    background:rgb(100, 254, 189);
+    transition: .5s;
+  }
+  .navbarToggle{
+    color: #000066;
+    background-color: #000066;
+  }
+  .image {
+    background-color: #000066;
+    background: url('/static/images/arte_inicio.webp') no-repeat top center;
+    background-size: cover;
+    height: 200px;
+    margin-top: -20px;
+  }
+ 
+  .image .heading {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 100px;
+  }
+  .image p {
+    text-align: center;
+    padding: 20px 20px;
+  }
+  .image p .btn {
+    margin-top: -30px;
+    background-color:#000066;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 1.2em;
+  }
+
+  }
+
+.image {
+  background-color: #000066;
+  background: url('/static/images/arte_inicio.webp') no-repeat top center;
+  background-size: cover;
+  height: 800px;
+  margin-top: -20px;
+  box-shadow: inset 0 -350px 200px 0 #FFF
+}
+
+.image .heading {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 600px;
+}
+.image p {
+  text-align: center;
+  padding: 20px 60px;
+}
+.image p .btn {
+  background-color:#000066;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.about {
+  background-color: #d400ff;
+  color: #000066;
+  height: 600px;
+  text-align: center;
+  margin-top: -20px;
+}
+.about h2 {
+  padding-top: 220px;
+}
+.about p {
+  padding: 20px 80px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-inputfile {
+  border: 1px solid #ccc;
+  display: inline-block;
+  font-size: 25px ;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
