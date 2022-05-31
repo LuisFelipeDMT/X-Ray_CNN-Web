@@ -1,1 +1,1 @@
-web: waitress-serve --listen=*:8000 xrimage.wsgi:application
+web: gunicorn xrimage.wsgi
