@@ -1,0 +1,443 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: montserrat;
+  text-align: center;
+}
+
+img.logo{
+  padding: 0px 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.navbar {
+  height: 80px;
+  width: 100%;
+  background-color: transparent;
+  justify-content:space-between;
+  position:fixed;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 0.5s ease 0s;
+}
+
+/* Solid class attached on scroll past first section */
+.navbar.solid {
+  background-color: #000066;
+  transition: background-color 0.5s ease 0s;
+  box-shadow: 0 0 10px grey;
+}
+
+.navbar ul{
+  float:right;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+.navbar ul li{
+
+  display:inline-block;
+  line-height: 80px;
+  margin: 5px 5px;
+}
+
+.navbar ul li a{
+  color:rgb(2, 10, 51);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 19px ;
+  padding: 7px 13px;
+  border-radius: 5px;   
+}
+
+.navbar ul li a.btnLog{
+  font-size: 17px ;
+  border: 2px solid rgb(100, 254, 189);
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: #fbfbff;
+}
+.navbar ul li a.btnReg{
+  font-size: 17px ;
+  border: 2px solid rgb(100, 254, 189);
+  padding: 5px 15px;
+  border-radius: 5px;
+  color: aliceblue;
+  background-color: #0a0091;
+}
+
+a.active, a:hover{
+
+  background:rgb(100, 254, 189);
+  transition: .5s;
+
+}
+
+.navbar-dark .navbar-toggler-icon {
+  border-radius: 5px;
+  border: 2px solid rgb(100, 254, 189);
+  border-color: lightgreen;
+  color: aliceblue;
+}
+
+.image {
+  background-color: #000066;
+  background: url('/static/images/arte_inicio.webp') no-repeat top center;
+  background-size: cover;
+  height: 800px;
+  margin-top: -20px;
+  margin-bottom: -50px;
+  box-shadow: inset 0 -350px 200px 0 #FFF
+}
+
+.subimage {
+  width: 40%;
+  height: 40%;
+  top:-20px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.image .beforeimg {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 600px;
+}
+.image .afterimg {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 600px;
+}
+
+.image .afterapi {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 600px;
+}
+.image p {
+  text-align: center;
+  padding: 20px 60px;
+}
+.image p .btn {
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+.about {
+  background-color: #d400ff;
+  color: #000066;
+  height: 600px;
+  text-align: center;
+  margin-top: -20px;
+}
+.about h2 {
+  padding-top: 220px;
+}
+.about p {
+  padding: 20px 80px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-inputfile {
+  border: 1px solid #ccc;
+  display: inline-block;
+  font-size: 25px ;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.custom-inputfile > svg {
+  height: 30px;
+  width: 30px;
+  text-align: left;
+  margin: -5px 0 ;
+  padding: 0;
+}
+
+.display-cover {
+  top: -30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: 5% auto;
+  position: relative;
+}
+video {
+  width: 100%;
+  background: rgb(0, 0, 0, 0.2);
+}
+.video-options {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+.controls {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: flex;
+}
+.controls > button:hover svg {
+  color: white;
+}
+
+.controls button:nth-child(1) {
+  border: 2px solid #008496;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 30px 20px;
+  background: transparent;
+}
+.controls button:nth-child(1) svg {
+  color: #008496;
+  height: 70px;
+  width: 70px;
+  text-align: center;
+  margin: -3px -15px;
+  padding: 0;
+}
+.controls button:nth-child(2) {
+  border: 2px solid #079600;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 30px 20px;
+  background: transparent;
+}
+.controls button:nth-child(2) svg {
+  color: #079600;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  margin: -3px -15px;
+  padding: 0;
+}
+.controls button:nth-child(3) {
+  border: 2px solid #f20000;
+  width: 90px;
+  height: 90px;
+  text-align: center;
+  border-radius: 100%;
+  margin: 30px 20px;
+  background: transparent;
+}
+.controls button:nth-child(3) svg {
+  color: #f20000;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+  margin: -3px -15px;
+  padding: 0;
+}
+
+@media (max-width: 767px) {
+
+  .navbar {
+    position:absolute;
+    height: 80px;
+    margin-top: -15px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    z-index: 100;
+    transition: background-color 0.5s ease 0s;
+  }
+  img.logo{
+    padding: 0px 0px;
+    margin-top: 2px;
+    margin-left: -5px;
+  }
+
+  .navbar ul{
+
+    float:left;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  
+  .navbar ul li{
+  
+    display:inline-block;
+    line-height: 10px;
+    margin: 5px 5px;
+  } 
+  .navbar ul li a{
+    color:rgb(2, 10, 51);
+    font-size: 17px ;
+    padding: 7px 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+  .navbar ul li a.btnLog{
+    font-size: 17px ;
+    padding: 3px 10px;
+    border-radius: 5px;
+    border:none;
+    background-color: transparent;
+  }
+  .navbar ul li a.btnReg{
+    font-size: 17px ;
+    padding: 3px 10px;
+    border-radius: 5px;
+    color:rgb(2, 10, 51);
+    border:none;
+    background-color: transparent;
+  }
+  .navbar ul li a.btnLog:hover{
+    background:rgb(100, 254, 189);
+    transition: .5s;
+  }
+  .navbar ul li a.btnReg:hover{
+    background:rgb(100, 254, 189);
+    transition: .5s;
+  }
+  .navbarToggle{
+    color: #000066;
+    background-color: #000066;
+  }
+  .image {
+    background-color: #000066;
+    background: url('/static/images/arte_inicio.webp') no-repeat top center;
+    background-size: cover;
+    height: 800px;
+    margin-top: -20px;
+    margin-bottom:40px;
+    box-shadow: inset 0 -350px 200px 0 #FFF
+  }
+
+  .display-cover {
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5% auto;
+    position: relative;
+  }
+
+  .controls button:nth-child(1) {
+    border: 2px solid #008496;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0px 0px;
+    background: transparent;
+  }
+  .controls button:nth-child(1) svg {
+    color: #008496;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin: -10.5px -15px;
+    padding: 0;
+  }
+  .controls button:nth-child(2) {
+    border: 2px solid #079600;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0px 15px;
+    background: transparent;
+  }
+  .controls button:nth-child(2) svg {
+    color: #079600;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin: -10.5px -15px;
+    padding: 0;
+  }
+  .controls button:nth-child(3) {
+    border: 2px solid #f20000;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0px -10px;
+    background: transparent;
+  }
+  .controls button:nth-child(3) svg {
+    color: #f20000;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    margin: -10.5px -15px;
+    padding: 0;
+  }
+
+  @media (min-width: 300px) and (max-width: 400px) {
+    .controls {
+      flex-direction: column;
+      
+   }
+      .controls button {
+        margin: 5px 0;
+    }
+  
+    .image {
+      background-color: #000066;
+      background: url('/static/images/arte_inicio.webp') no-repeat top center;
+      background-size: cover;
+      height: 800px;
+      margin-top: -20px;
+      margin-bottom:70px;
+      box-shadow: inset 0 -350px 200px 0 #FFF
+    }
+    .controls button:nth-child(2) {
+      border: 2px solid #079600;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      border-radius: 100%;
+      margin: 0px 0px;
+      background: transparent;
+    }
+    .controls button:nth-child(2) svg {
+      color: #079600;
+      height: 35px;
+      width: 35px;
+      text-align: center;
+      margin: -10.5px -15px;
+      padding: 0;
+    }
+    .controls button:nth-child(3) {
+      border: 2px solid #f20000;
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      border-radius: 100%;
+      margin: 10px 0px;
+      background: transparent;
+    }
+    .controls button:nth-child(3) svg {
+      color: #f20000;
+      height: 35px;
+      width: 35px;
+      text-align: center;
+      margin: -10.5px -15px;
+      padding: 0;
+    }
+  
+  }
+
+  }
