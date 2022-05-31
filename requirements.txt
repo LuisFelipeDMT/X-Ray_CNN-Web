@@ -1,13 +1,14 @@
-psycopg2-binary
 asgiref==3.5.2
 certifi==2020.6.20
 dj-database-url==0.5.0
 Django==4.0.4
 django-feather==0.3.0
-django-heroku==0.3.1
+django-on-heroku
 gunicorn==20.1.0
+psycopg2==2.9.3
 python-decouple==3.6
 sqlparse==0.4.2
 tzdata==2022.1
 waitress==2.1.2
 whitenoise==6.1.0
+wincertstore==0.2
