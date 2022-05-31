@@ -21,6 +21,21 @@ dependencies:
   - xz=5.2.5=h8cc25b3_1
   - zlib=1.2.12=h8cc25b3_2
   - pip:
+    - pip==21.2.4
+    - setuptools==61.2.0
+    - python==3.10.4
+    - libffi==3.4.2
+    - openssl==1.1.1n
+    - git==2.34.1
+    - vc==14.2
+    - sqlite==3.38.3
+    - wincertstore==0.2
+    - tk==8.6.11
+    - vs2015_runtime==14.27.29016
+    - zlib==1.2.12
+    - ca-certificates==2022.4.26
+    - bzip2==1.0.8
+    - xz==5.2.5
     - asgiref==3.5.2
     - dj-database-url==0.5.0
     - django==4.0.4
@@ -32,4 +47,7 @@ dependencies:
     - sqlparse==0.4.2
     - tzdata==2022.1
     - whitenoise==6.1.0
+    
 prefix: C:\Users\luisf\anaconda3\envs\web_app
+
+
