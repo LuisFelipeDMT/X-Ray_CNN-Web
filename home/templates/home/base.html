@@ -93,44 +93,13 @@
         </div>
       </nav>
     </header>
-<div class="image">
-    <h1 class="beforeimg">Submeta um Raio-X de Torax para avaliação!</h1>
-    <h1 class="afterimg d-none">Ótima imagem, agora é só clicar no botão de aprovação para enviar! 😁</h1>
-    <h1 class="afterapi d-none">Sucesso, sua imagem foi processada! 😁</h1>
-    <button class="btn btn-outline-success approved d-none" title="Aprovado"><i data-feather="check"></i></button>
-    <button class="btn btn-danger rejected d-none" title="Rejeitado"><i data-feather="slash"></i></button>
-    <form method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      <p><label for="inputfile" class="custom-inputfile" id="uploadbutton" name="uploadbutton">
-        <i class ="inputform" data-feather="upload"></i> Enviar imagem
-      </label>
-      <input id='inputfile' type='file' name='inputfile' accept="image/png, image/jpeg" onchange="readURL(this);"/>
-    </form>
-    </p>
-</div>
-<div class="container">
-  <img class="subimage d-none" id="subimage" src="#"></img>
-</div>
-<h1 class="beforeimg d-none">Caso prefira, tire uma foto com a câmera de seu dispositivo!</h1>
-<h1 class="afterimg d-none">Verifique a centralização da foto e a qualidade da mesma 🖼️ </h1>
-<h1 class="afterapi d-none"></h1>
-<button class="btn btn-danger play d-none" title="Play"><i data-feather="camera"></i></button>
-<p class="beforeimg d-none" >Caso tenha rejeitado o uso da câmera ou queira usar uma câmera diferente do seu dispositivo, por favor, abra e feche o site novamente.</p>
- <div class="display-cover d-none">
-  <video autoplay></video>
-  <canvas class="d-none"></canvas>
-  <div class="controls">
-      <button class="btn btn-info pause d-none" title="Pause"><i data-feather="camera"></i></button>
-      <button class="btn btn-outline-success aprovado d-none" title="Aprovado"><i data-feather="check"></i></button>
-      <button class="btn btn-danger rejeitado d-none" title="Rejeitado"><i data-feather="slash"></i></button>
-  </div>
-  <div class="video-options d-none">
-    <select title="customSelector" id="" class="custom-select">
-        <option value="">Select camera</option>
-    </select>
-</div>
 
-</div>
+    {% block content %}
+
+
+    {% endblock content %}
+
+
     <script>
       feather.replace()
     </script>

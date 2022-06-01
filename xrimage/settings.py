@@ -16,6 +16,7 @@ from decouple import config
 import dj_database_url
 import os
 from django.utils.encoding import force_str
+import cloudinary
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -46,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -131,6 +134,19 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = 'media/'
+
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+# cloudinary.config(
+#   cloud_name = force_str(os.environ.get("cloud_name")),
+#   api_key = force_str(os.environ.get("api_key")),
+#   api_secret = force_str(os.environ.get("api_secret")),
+# )
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
