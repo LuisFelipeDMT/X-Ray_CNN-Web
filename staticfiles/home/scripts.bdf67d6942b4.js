@@ -18,10 +18,10 @@ $(document).ready(function() {
     var afterapitxt=document.getElementsByClassName("afterapi")
     let streamStarted = false;
     let flag=false;
-
+    
 
     const [pause,screenshot,reject] = buttons;
-
+    
     const constraints = {
       video: {
         width: {
@@ -36,7 +36,7 @@ $(document).ready(function() {
         },
       }
     };
-
+    
     cameraOptions.onchange = () => {
         console.log(selector)
       const updatedConstraints = {
@@ -45,11 +45,11 @@ $(document).ready(function() {
           exact: cameraOptions.value
         }
       };
-      if (streamStarted) {
+      if (streamStarted) {       
         startStream(updatedConstraints);
       }
     };
-
+    
     const getCameraSelection = async () => {
         const devices = await navigator.mediaDevices.enumerateDevices();
         const videoDevices = devices.filter(device => device.kind === 'videoinput');
@@ -113,15 +113,15 @@ $(document).ready(function() {
         for(var i=0;i<beforeimgtxt.length;i++)
         {
             beforeimgtxt[i].classList.remove('d-none')
-        }
+        }  
         for(var i=0;i<afterimgtxt.length;i++)
         {
             afterimgtxt[i].classList.add('d-none')
-        }
+        }  
         for(var i=0;i<afterapitxt.length;i++)
         {
             afterapitxt[i].classList.add('d-none')
-        }
+        }  
     }
 
 
@@ -132,18 +132,18 @@ $(document).ready(function() {
     const userAction = async () => {
         const response = await fetch(`https://meuservico-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`);
         console.log(`https://meuservico-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`)
-        console.log("testeeee")
+        console.log("testeeee")        
         const myJson = await response.json(); //extract JSON from the http response
         console.log(myJson)
         for(var i=0;i<afterimgtxt.length;i++)
         {
             afterimgtxt[i].classList.add('d-none')
-        }
+        }  
         for(var i=0;i<afterapitxt.length;i++)
         {
             afterapitxt[i].classList.remove('d-none')
         }
-        try{
+        try{  
           afterapitxt[1].innerHTML = `O classificou o Raio-X na categoria ${myJson['Probability']} com probabilidade estimada de ${myJson['Disease']}`
         }catch{
           afterapitxt[1].innerHTML = 'Serviço indisponível'
@@ -162,29 +162,29 @@ $(document).ready(function() {
         for(var i=0;i<beforeimgtxt.length;i++)
         {
             beforeimgtxt[i].classList.add('d-none')
-        }
+        }  
         for(var i=0;i<afterimgtxt.length;i++)
         {
             afterimgtxt[i].classList.remove('d-none')
-        }
+        }  
         for(var i=0;i<afterapitxt.length;i++)
         {
             afterapitxt[i].classList.add('d-none')
-        }
+        }  
       };
-
+    
     const pauseStream = () => {
-
+        
       video.pause();
-
+      
       reject.classList.remove('d-none')
       screenshot.classList.remove('d-none');
       pause.classList.add('d-none');
     };
-
+        
     pause.onclick = pauseStream;
     screenshot.onclick = doScreenshot;
-
+    
     const startStream = async (constraints) => {
     try {
         stream = await navigator.mediaDevices.getUserMedia(constraints);
@@ -194,7 +194,7 @@ $(document).ready(function() {
         }
     handleStream(stream);
     };
-
+        
     const handleStream = (stream) => {
       video.srcObject = stream;
       play.classList.add('d-none');
@@ -205,13 +205,13 @@ $(document).ready(function() {
       if(flag==false){
           getCameraSelection()
           flag=true
-        }
+        }  
     };
 
     function changeImage(path) {
         document.getElementById("logo").src = path;
     }
-
+    
     function colorLinks(hex,links_ref)
     {
     var links = links_ref;
@@ -219,10 +219,10 @@ $(document).ready(function() {
     {
         if(links[i].href)
         {
-
-            links[i].style.color = hex;
+            
+            links[i].style.color = hex;  
         }
-    }
+    }  
     }
     function colorHover(css)
     {
@@ -233,29 +233,30 @@ $(document).ready(function() {
         } else {
             style.appendChild(document.createTextNode(css));
         }
-
+        
         document.getElementsByTagName('head')[0].appendChild(style);
     }
 
     $(window).scroll(function() {
       // checks if window is scrolled more than 500px, adds/removes solid class
         linksRef=document.getElementById("navbarToggle").getElementsByClassName('link')
-        if($(this).scrollTop() > 500) {
+        if($(this).scrollTop() > 500) { 
             $('.navbar').addClass('solid');
-          changeImage('Iteratec_Sob_Arredondado_Curto_sem_background.296ddfdc3120.png')
+            changeImage('/static/images/Iteratec_Conceito2.png')
             colorLinks("#ffffff",linksRef)
             var css = "a.active, a:hover{ background:rgb(81, 81, 190) }";
             colorHover(css)
         } else {
             $('.navbar').removeClass('solid');
-          changeImage('Iteratec_Sob_Arredondado_Curto_sem_background.296ddfdc3120.png')
+            changeImage('/static/images/Iteratec_Sob_Arredondado_Curto_sem_background.png')
             colorLinks("#000d4f",linksRef)
             var css = "a.active, a:hover{ background:rgb(100, 254, 189) }";
             colorHover(css)
 
         }
     });
-
-
+    
+    
 
 });
+
