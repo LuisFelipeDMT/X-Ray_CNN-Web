@@ -142,18 +142,20 @@ $(document).ready(function() {
 
 
     approved_upload.onclick = () => {
-      // f = File.new("tmp/filename.txt", 'w')
-      // f << "hi there"
-      // f.close
-      // Dir.entries(Dir.pwd.to_s + ("/tmp"))
+      let formData = new FormData();
+      formData.append("photo", viewwindow);
+      console.log(viewwindow)
+      console.log(viewwindow.src)
+      console.log("Estou aqui")
+      fetch('/upload/image', { method: "POST", body: formData });
         userAction()
     }
 
     const userAction = async () => {
-        console.log(`https://xrimageapi-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`)
-        const response = await fetch(`https://xrimageapi-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`);
-        const myJson = await response.json(); //extract JSON from the http response
-        console.log(myJson)
+        // console.log(`https://xrimageapi-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`)
+        // const response = await fetch(`https://xrimageapi-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`);
+        // const myJson = await response.json(); //extract JSON from the http response
+        // console.log(myJson)
         for(var i=0;i<afterimgtxt.length;i++)
         {
             afterimgtxt[i].classList.add('d-none')
