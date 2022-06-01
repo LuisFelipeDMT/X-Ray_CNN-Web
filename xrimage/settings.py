@@ -139,13 +139,13 @@ MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = 'media/'
 
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-# cloudinary.config(
-#   cloud_name = force_str(os.environ.get("cloud_name")),
-#   api_key = force_str(os.environ.get("api_key")),
-#   api_secret = force_str(os.environ.get("api_secret")),
-# )
+cloudinary.config(
+  cloud_name = force_str(os.environ.get("cloud_name")),
+  api_key = force_str(os.environ.get("api_key")),
+  api_secret = force_str(os.environ.get("api_secret")),
+)
 
 
 # Default primary key field type
