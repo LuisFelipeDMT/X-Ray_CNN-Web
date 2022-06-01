@@ -6,9 +6,6 @@ raw_data/
 *.csv
 **/__pycache__/
 .env
-sunlit-form-351605-3865a929d3a7.json
 **/gkey
-**/models
-**/images
 **/COVID-19_Radiography_Dataset
 **/google-cloud-sdk
