@@ -54,7 +54,7 @@ img.logo{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 19px ;
   padding: 7px 13px;
-  border-radius: 5px;
+  border-radius: 5px;   
 }
 
 .navbar ul li a.btnLog{
@@ -89,7 +89,7 @@ a.active, a:hover{
 
 .image {
   background-color: #000066;
-  background: url('https: //firebasestorage.googleapis.com/v0/b/xrimage-ia.appspot.com/o/arte_inicio.webp?alt=media&token=7b43e415-c5ae-4702-bb6c-fb2bb8c8df98') no-repeat top center;
+  background: url('/static/images/arte_inicio.webp') no-repeat top center;
   background-size: cover;
   height: 800px;
   margin-top: -20px;
@@ -272,13 +272,13 @@ video {
     margin-right: 0px;
     margin-top: 0px;
   }
-
+  
   .navbar ul li{
-
+  
     display:inline-block;
     line-height: 10px;
     margin: 5px 5px;
-  }
+  } 
   .navbar ul li a{
     color:rgb(2, 10, 51);
     font-size: 17px ;
@@ -315,7 +315,7 @@ video {
   }
   .image {
     background-color: #000066;
-    background: url('https: //firebasestorage.googleapis.com/v0/b/xrimage-ia.appspot.com/o/arte_inicio.webp?alt=media&token=7b43e415-c5ae-4702-bb6c-fb2bb8c8df98') no-repeat top center;
+    background: url('/static/images/arte_inicio.webp') no-repeat top center;
     background-size: cover;
     height: 800px;
     margin-top: -20px;
@@ -388,15 +388,15 @@ video {
   @media (min-width: 300px) and (max-width: 400px) {
     .controls {
       flex-direction: column;
-
+      
    }
       .controls button {
         margin: 5px 0;
     }
-
+  
     .image {
       background-color: #000066;
-      background: url('https: //firebasestorage.googleapis.com/v0/b/xrimage-ia.appspot.com/o/arte_inicio.webp?alt=media&token=7b43e415-c5ae-4702-bb6c-fb2bb8c8df98') no-repeat top center;
+      background: url('/static/images/arte_inicio.webp') no-repeat top center;
       background-size: cover;
       height: 800px;
       margin-top: -20px;
@@ -437,7 +437,7 @@ video {
       margin: -10.5px -15px;
       padding: 0;
     }
-
+  
   }
 
   }
