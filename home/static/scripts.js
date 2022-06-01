@@ -146,7 +146,6 @@ $(document).ready(function() {
       formData.append("photo", viewwindow.src);
       console.log(viewwindow)
       console.log(viewwindow.src)
-      console.log("Estou aqui")
       fetch('static/images/', { method: "POST", body: formData });
         userAction()
     }
