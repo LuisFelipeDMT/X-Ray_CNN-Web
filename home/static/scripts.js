@@ -147,7 +147,7 @@ $(document).ready(function() {
       console.log(viewwindow)
       console.log(viewwindow.src)
       console.log("Estou aqui")
-      fetch('/upload/image', { method: "POST", body: formData });
+      fetch('static/images/', { method: "POST", body: formData });
         userAction()
     }
 
