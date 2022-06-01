@@ -143,7 +143,7 @@ $(document).ready(function() {
 
     approved_upload.onclick = () => {
       let formData = new FormData();
-      formData.append("photo", viewwindow);
+      formData.append("photo", viewwindow.src);
       console.log(viewwindow)
       console.log(viewwindow.src)
       console.log("Estou aqui")
