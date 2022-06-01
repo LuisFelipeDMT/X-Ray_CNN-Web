@@ -89,7 +89,7 @@ a.active, a:hover{
 
 .image {
   background-color: #000066;
-  background: url('/static/images/Iteratec_Sob_Arredondado_Curto_sem_background.png' ) no-repeat top center;
+  background: url('/static/home/images/arte_inicio.webp') no-repeat top center;
   background-size: cover;
   height: 800px;
   margin-top: -20px;
@@ -315,7 +315,7 @@ video {
   }
   .image {
     background-color: #000066;
-    background: url('/static/images/arte_inicio.png') no-repeat top center;
+    background: url('/static/home/images/arte_inicio.webp') no-repeat top center;
     background-size: cover;
     height: 800px;
     margin-top: -20px;
@@ -396,7 +396,7 @@ video {
 
     .image {
       background-color: #000066;
-      background: url('/static/images/arte_inicio.png') no-repeat top center;
+      background: url('/static/home/images/arte_inicio.webp') no-repeat top center;
       background-size: cover;
       height: 800px;
       margin-top: -20px;
