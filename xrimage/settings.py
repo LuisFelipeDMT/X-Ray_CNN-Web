@@ -17,9 +17,6 @@ import dj_database_url
 import os
 from django.utils.encoding import force_str
 import cloudinary
-import pyrebase
-
-
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

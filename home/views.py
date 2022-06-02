@@ -52,9 +52,9 @@ def home (request):
                     categories=responseApi.json()['Categories']
                     disease=responseApi.json()['Disease']
                     zipprobcat=zip(probabilities,categories)
-                    x=categories
-                    y=probabilities
-                    chart=get_plot(x,y)
+                    # x=categories
+                    # y=probabilities
+                    # chart=get_plot(x,y)
                     return render(request,'home/analise.html',{'title':'Resultado','zipprobcat':zipprobcat,'disease':disease})
                 else:
                     print("Falha de comunicação com a API")
