@@ -16,3 +16,4 @@ django-cloudinary-storage
 pillow
 pyrebase4
 matplotlib
+python-decouple
