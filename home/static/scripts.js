@@ -152,9 +152,9 @@ $(document).ready(function() {
 
     const userAction = async () => {
         // console.log(`https://xrimageapi-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`)
-        // const response = await fetch(`https://xrimageapi-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`);
-        // const myJson = await response.json(); //extract JSON from the http response
-        // console.log(myJson)
+        const response = await fetch(`https://xrimageapi-agg4nfwosq-uc.a.run.app/analyse_image?imageLink=${viewwindow.src}`);
+        const myJson = await response.json(); //extract JSON from the http response
+        console.log(myJson)
         for(var i=0;i<afterimgtxt.length;i++)
         {
             afterimgtxt[i].classList.add('d-none')

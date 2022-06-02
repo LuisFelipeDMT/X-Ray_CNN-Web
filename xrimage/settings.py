@@ -17,6 +17,9 @@ import dj_database_url
 import os
 from django.utils.encoding import force_str
 import cloudinary
+import pyrebase
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,7 +30,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 
-SECRET_KEY = force_str(os.environ.get('SECRET_KEY'))
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', cast=bool)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -141,11 +145,25 @@ MEDIA_URL = 'media/'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+os.environ['GOOGLE_APPLICATION_CREDENTIALS']='/secrets/xrimage-ia-firebase-adminsdk-u5vbs-57ac4d07c1.json'
+
 cloudinary.config(
-  cloud_name = force_str(os.environ.get("cloud_name")),
-  api_key = force_str(os.environ.get("api_key")),
-  api_secret = force_str(os.environ.get("api_secret")),
+  cloud_name = config('CLOUD_NAME'),
+  api_key = config('API_KEY'),
+  api_secret = config('API_SECRET'),
 )
+
+FIREBASE_CONFIG = {
+    "apiKey": config('apiKey'),
+    "authDomain": config('authDomain'),
+    "projectId": config('projectId'),
+    "storageBucket": config('storageBucket'),
+    "messagingSenderId": config('messagingSenderId'),
+    "appId": config('appId'),
+    "measurementId": config('measurementId'),
+    "databaseURL": ""
+}
+
 
 
 # Default primary key field type
