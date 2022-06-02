@@ -16,6 +16,8 @@ from .utils import get_plot
 
 
 def home (request):
+
+
     if request.method == 'POST':
         form = PhotoForm(request.POST, request.FILES)
         if form.is_valid():
@@ -25,14 +27,14 @@ def home (request):
                 randval='img_' + str(randint(0,100000000))
                 public_id = randval + ext
                 file=request.FILES['inputfile']
-                #Usando Cloudinary
-                # response = cloudinary.uploader.upload(
-                #     file,
-                #     public_id = public_id,
-                #     folder = "x-ray",
-                #     overwrite = True
-                # )
-                # responseUrl=response['url']
+    #             #Usando Cloudinary
+    #             # response = cloudinary.uploader.upload(
+    #             #     file,
+    #             #     public_id = public_id,
+    #             #     folder = "x-ray",
+    #             #     overwrite = True
+    #             # )
+    #             # responseUrl=response['url']
 
                 #Usando Firebase
                 config=settings.FIREBASE_CONFIG
@@ -51,11 +53,14 @@ def home (request):
                     probabilities=responseApi.json()['Probabilities']
                     categories=responseApi.json()['Categories']
                     disease=responseApi.json()['Disease']
+                    print(probabilities)
+                    print(categories)
+                    print(disease)
                     zipprobcat=zip(probabilities,categories)
-                    # x=categories
-                    # y=probabilities
-                    # chart=get_plot(x,y)
-                    return render(request,'home/analise.html',{'title':'Resultado','zipprobcat':zipprobcat,'disease':disease})
+                    x=categories
+                    y=probabilities
+                    chart=get_plot(x,y)
+                    return render(request,'home/report.html',{'title':'Resultado','zipprobcat':zipprobcat,'disease':disease,'chart':chart})
                 else:
                     print("Falha de comunicação com a API")
             except:

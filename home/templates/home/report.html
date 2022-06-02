@@ -1,0 +1,10 @@
+{% extends 'home/base.html' %}
+{% block content %}
+<div class="image"></div>
+
+<h1>A maior probabilidade é para a categoria {{disease}}.</h1>
+
+<img src="data:image/png;base64,{{ chart }}">
+
+
+{% endblock content %}
